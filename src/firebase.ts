@@ -21,7 +21,7 @@ const app = initializeApp(firebaseConfig);
 const db : any = getFirestore(app);
 
 // Get a list of meals from your database
-async function getCities(db : any) {
+async function getMeals(db : any) {
   const mealCollection = collection(db, 'meals');
   const mealsSnapshot = await getDocs(mealCollection);
   const mealList = mealsSnapshot.docs.map(doc => doc.data());
